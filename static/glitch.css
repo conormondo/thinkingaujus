@@ -1,0 +1,29 @@
+.center__text {
+  margin: auto;
+  font-size: 110px;
+  color: black;
+  text-transform: uppercase;
+}
+
+/* Chromatic Effect */
+.center__text {
+  color: black;
+  text-shadow:
+            -3px -3px blue,
+            -3px 0px darkmagenta,
+            -3px 3px fuchsia,
+            0px 3px crimson,
+            3px 3px red,
+            3px 0px orange,
+            3px -3px yellow,
+            0px -3px aqua;
+
+
+
+
+
+}
+
+.nav-link:hover, a.active {
+  text-decoration: underline;
+}
