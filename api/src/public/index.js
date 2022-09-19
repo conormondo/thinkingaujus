@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 // Grabs age date
 function getAge() {
     const bd = new Date(1994, 03, 12);
@@ -9,3 +11,14 @@ function getAge() {
 function updateAge() {
     document.body.querySelector('#age').innerText = getAge();
 }
+
+// Random sandwich call
+function getRandomSandwich() {
+    // TODO: Make work
+    let recommendationFile = fs.readFileSync('../recs.json');
+    let recsJson = JSON.parse(recommendationFile);
+    let choice = Math.floor(Math.random() * recsJson.length - 1);
+    console.log('Randomly selected number: ', choice + 1)
+    console.log(recsJson[choice])
+    return recJson[choice];
+};

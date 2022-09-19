@@ -1,4 +1,5 @@
 const express = require('express');
+const { randomView, getRandomSandwich } = require('../controllers/sandwichController');
 
 const router = express.Router();
 
@@ -8,4 +9,5 @@ router.get('/', (req, res) => {
 router.get('/about', (req, res) => {
     res.render('about')
 });
+router.get('/sandwiches', randomView);
 module.exports = router
