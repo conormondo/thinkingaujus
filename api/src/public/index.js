@@ -1,4 +1,4 @@
-const fs = require('fs');
+const { response } = require("express");
 
 // Grabs age date
 function getAge() {
@@ -12,13 +12,31 @@ function updateAge() {
     document.body.querySelector('#age').innerText = getAge();
 }
 
-// Random sandwich call
-function getRandomSandwich() {
-    // TODO: Make work
-    let recommendationFile = fs.readFileSync('../recs.json');
-    let recsJson = JSON.parse(recommendationFile);
+function showSandwich(recsJson) {
+    const recName = document.getElementById('recName');
+    const recBlurb = document.getElementById('recBlurb');
+    const recId = document.getElementById('recId');
+    const recRestaurant = document.getElementById('recRestaurant');
+
     let choice = Math.floor(Math.random() * recsJson.length - 1);
+    let sandwich = recsJson[choice]
+
+    recName.innerText = sandwich.name;
+    recBlurb.innerText = sandwich.blurb;
+    recId.innerText = sandwich.id;
+    recRestaurant.innerText = sandwich.restaurant;
+
     console.log('Randomly selected number: ', choice + 1)
     console.log(recsJson[choice])
-    return recJson[choice];
+}
+
+// Random sandwich call
+function getRandomSandwich() {
+    
+    // TODO: Make work
+    fetch('/data')
+    .then(response => response.json())
+    .then(data => showSandwich(data));
+
+    return;
 };
