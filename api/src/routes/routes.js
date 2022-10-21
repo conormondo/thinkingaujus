@@ -1,7 +1,7 @@
 const { json } = require('body-parser');
 const express = require('express');
 const fs = require('fs');
-const { randomView, sandwichOverview} = require('../controllers/sandwichController');
+const { randomView, sandwichOverview, tableView} = require('../controllers/sandwichController');
 
 const filepath = '/Users/conor.manning/projects/portfolio-site/api/src/recs.json';
 
@@ -16,6 +16,7 @@ router.get('/about', (req, res) => {
 router.get('/sandwiches', sandwichOverview);
 
 router.get('/sandwiches/random', randomView);
+router.get('/sandwiches/all', tableView);
 
 router.get('/data', (req, res) => {
     fs.readFile(filepath, 'utf8', (err,data) => {
