@@ -13,7 +13,7 @@ const randomView = (req, res) => {
 const tableView = (req, res) => {
     async function get_sandwich_data () {
         let response = await fetch('/data');
-        let json = await response.json()
+        let json = await response.json();
         res.render('sandwichTable', {recommendations: json});
     }
     get_sandwich_data()
