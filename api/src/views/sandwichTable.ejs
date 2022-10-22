@@ -1,23 +1,42 @@
 <%- include('_header'); %>
-  <body onload="getRandomSandwich()">
+  <body>
     <%- include('_nav'); %>
         <div class="container home-content">
           <h1 class="mt-3">Sandwiches</h1>
           <p>
           This is going to be the page for the table of sanwich entries
           </p>
-          <table>
-            <tr>
-              <th>Restaurant</th>
-              <th>Sanwich Name</th>
-              <th>blurb</th>
-            </tr>
-            <% for (var i=0; i < 10;  i++) { %>
-              <td>recommendations[i].restaurant</td>
-              <td>recommendations[i].name</td>
-              <td>recommendations[i].blurb</td>
-            <% } %>
-          </table>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Restaurant</th>
+                  <th scope="col">Sandwich Name</th>
+                  <th scope="col">Blurb</th>
+                </tr>
+              </thead>
+              <tbody> 
+                <% for (var i=0; i < data.length;  i++) { %>
+                  <tr>
+                    <th scope="row"><%= data[i].id %></th>
+                      <td><%= data[i].restaurant %></td>
+                      <td><%= data[i].name %></td>
+                      <td><%= data[i].blurb %></td>
+                  </tr>
+                <% } %>
+              </tbody>
+            </table>
+          </div>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item active "><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
 
         </div>
     </div>
