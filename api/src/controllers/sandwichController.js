@@ -1,5 +1,5 @@
 const fs = require('fs');
-
+const recommendations = require('../recs.json')
 // OverView
 const sandwichOverview = (req, res) => {
     res.render('sandwiches', {});
@@ -11,12 +11,8 @@ const randomView = (req, res) => {
 
 // Gallery View
 const tableView = (req, res) => {
-    async function get_sandwich_data () {
-        let response = await fetch('/data');
-        let json = await response.json();
-        res.render('sandwichTable', {recommendations: json});
-    }
-    get_sandwich_data()
+    res.render('sandwichTable', { data: recommendations });
+    // console.log(recommendations)
 };
 
 module.exports = {
