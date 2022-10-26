@@ -6,8 +6,13 @@
           <p>
           This is going to be the page for the random sandwich generator
           </p>
-          <button type="button" onclick="getRandomSandwich()" class="btn btn-primary btn-lg">Random Sandwich</button>
-          <br>
+          <div id="selection">
+            <button type="button" onclick="getRandomSandwich()" class="btn btn-primary btn-lg">Random Sandwich</button>
+            <div class="form-check form-switch mt-1">
+              <input class="form-check-input" type="checkbox" id="recommendSwitch" checked>
+              <label class="form-check-label" for="recommendSwitch" >Only show recommended entries.</label>
+            </div>
+          </div>
           <br>
           <div>
               <div class="card">

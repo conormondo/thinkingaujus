@@ -1,3 +1,4 @@
+const { query } = require("express");
 
 // Grabs age date
 function getAge() {
@@ -25,15 +26,22 @@ function showSandwich(recsJson) {
     recId.innerText = sandwich.id;
     recRestaurant.innerText = sandwich.restaurant;
 
-    console.log('Randomly selected number: ', choice + 1)
-    console.log(recsJson[choice])
+    // console.log('Randomly selected number: ', choice + 1)
+    // console.log(recsJson[choice])
 }
 
-// Random sandwich call
+// Random sandwich call. With only recommended or not check.
+
 function getRandomSandwich() {
-    
+    var endpoint = '/data';
+
+    let recSwitch = document.getElementById('recommendSwitch');
+    if (recSwitch.checked) {
+        var _query = '?recommended=' + true;
+        var endpoint = endpoint + _query;
+    }
     // TODO: Make work
-    fetch('/data')
+    fetch(endpoint)
     .then(response => response.json())
     .then(data => showSandwich(data));
 
