@@ -1,5 +1,5 @@
 const fs = require('fs');
-const recommendations = require('../recs.json')
+const recommendations = require('../MOCK_DATA.json')
 // OverView
 const sandwichOverview = (req, res) => {
     res.render('sandwiches', {});
