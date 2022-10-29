@@ -19,6 +19,6 @@ router.get('/sandwiches/random', randomView);
 router.get('/sandwiches/all', tableView);
 
 // API Endpoint
-router.get('/data', apiServe);
+router.get('/data.json', apiServe);
 
 module.exports = router
