@@ -1,5 +1,3 @@
-const fs = require('fs');
-const recommendations = require('../MOCK_DATA.json')
 // OverView
 const sandwichOverview = (req, res) => {
     res.render('sandwiches', {});
@@ -11,8 +9,7 @@ const randomView = (req, res) => {
 
 // Gallery View
 const tableView = (req, res) => {
-    res.render('sandwichTable', { data: recommendations });
-    // console.log(recommendations)
+    res.render('sandwichTable', {});
 };
 
 module.exports = {
