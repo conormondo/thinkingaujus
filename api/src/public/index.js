@@ -33,7 +33,7 @@ function showSandwich(recsJson) {
 // Random sandwich call. With only recommended or not check.
 
 function getRandomSandwich() {
-    var endpoint = '/data';
+    var endpoint = '/data.json';
 
     let recSwitch = document.getElementById('recommendSwitch');
     if (recSwitch.checked) {
