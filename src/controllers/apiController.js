@@ -1,5 +1,5 @@
 const fs = require('fs');
-const filepath = '/Users/conor.manning/projects/portfolio-site/api/src/MOCK_DATA.json';
+const filepath = '/Users/conor.manning/projects/portfolio-site/src/MOCK_DATA.json';
 
 const apiServe = (req, res) => {
     const filters = req.query;
