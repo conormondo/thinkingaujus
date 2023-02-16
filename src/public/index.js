@@ -1,3 +1,5 @@
+const { query } = require("express");
+
 // Grabs age date
 function getAge() {
     const bd = new Date(1994, 03, 12);
