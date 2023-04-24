@@ -1,0 +1,20 @@
+<%- include('_header'); %>
+  <body>
+    <%- include('_nav'); %>
+    <div class="fakeHero container">
+      <div class="px-4 pt-5 mb-5 text-center">
+        <h1 class="center__text">Conor Manning</h1>
+        <h3>Software. Data Analysis. Sandwich Recommendations.</h3>
+        <img class="d-block mx-auto pt-5" src="/static/clubbin-logo.png" alt="">
+      </div>
+      <div class="container">
+      </div>
+    </div>
+ 
+  <script>
+    document.body.getElementsByClassName('navbar-brand')[0].style.visibility = 'hidden' 
+  </script>
+  <script src="/js/bootstrap.js"></script>
+  </body>
+  <%- include('_footer'); %>
+</html>
