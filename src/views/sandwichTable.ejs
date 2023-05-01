@@ -6,33 +6,28 @@
           <p>
           This is going to be the page for the table of sanwich entries
           </p>
-          <div>
           <table
-            id="table"
             data-toggle="table"
-            data-unique-id="id"
-            data-detail-view="false"
-            data-detail-formatter="imageExpander"
+            data-filter-control="false"
+            data-filter-clear-show="true"
+            data-show-search-clear-button="true"
             data-pagination="true"
             data-pagination-h-align="left"
-            data-pagination-detail-h-align="right"            
-            data-url="/data.json">
+            data-pagination-detail-h-align="right"
+            data-url="/data.json"
+            >
             <thead>
               <tr>
                 <th data-field="id">ID</th>
-                <th data-field="name">Name</th>
-                <th data-field="restaurant">Restaurant</th>
-                <th data-field="blurb">Blurb</th>
+                <th data-field="name" data-sortable="true">Name</th>
+                <th data-field="restaurant" data-sortable="true" data-filter-control="select">Restaurant</th>
+                <th data-field="blurb"data-sortable="true" >Blurb</th>
                 <th data-field="recommended">Recommended</th>
               </tr>
             </thead>
           </table>
 
     
-    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/bootstrap-table@1.21.1/dist/bootstrap-table.min.js"></script>
     <script>
       function imageExpander(index, row) {
         // TODO: pull src from DB
@@ -44,6 +39,10 @@
         return `<img class="sandwich" src="${img_src}" alt="">`
       }
     </script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap-table.min.js"></script>
+    <script src="/js/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
   </body>
   <%- include('_footer'); %>
 </html>
