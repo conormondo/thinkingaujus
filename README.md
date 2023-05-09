@@ -1,5 +1,5 @@
 # Thinking Au Jus
-Version 1.0 - Static
+Version 1.4 - Static
 
 ## Description
 This is the repository for my personal portfolio website [conormanning.com](https://conormanning.com). I have more plans for the actual site content, but a majority of the purpose in creating this website was to practice backend development and architecturing. <br>

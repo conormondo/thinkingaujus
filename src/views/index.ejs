@@ -1,19 +1,28 @@
 <%- include('_header'); %>
   <body>
     <%- include('_nav'); %>
-    <div class="fakeHero container">
-      <div class="px-4 pt-5 mb-5 text-center">
-        <h1 class="center__text">Conor Manning</h1>
-        <h3>Software. Data Analysis. Sandwich Recommendations.</h3>
-        <img class="d-block mx-auto pt-5" src="/static/clubbin-logo.png" alt="">
+    <div class="fakeHero container-fluid">
+      <div class="px-4 mb-5 text-center">
+        <div class="px-4 my-5 text-center">
+          <h1 class="center__text static">Conor Manning</h1>
+          <div class="col-lg-6 mx-auto">
+            <h3 class="mb-4">Software. Data Analysis. Sandwich Recommendations.</h3>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+            </div>
+          </div>
+          <div class="overflow-hidden" style="max-height: 30vh;">
+            <div class="container">
+              <img src="/static/hero_sando.png" class="img-fluid border rounded-3 shadow mb-4" alt="Example image" width="700"
+                height="500" loading="lazy">
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="container">
+      <div class="container-fluid">
       </div>
     </div>
  
-  <script>
-    document.body.getElementsByClassName('navbar-brand')[0].style.visibility = 'hidden' 
-  </script>
+
   <script src="/js/bootstrap.js"></script>
   </body>
   <%- include('_footer'); %>
