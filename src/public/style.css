@@ -6,7 +6,7 @@
 }
 
 /* Chromatic Effect */
-.center__text {
+.static {
   color: black;
   text-shadow:
             -.027em -.027em blue,
@@ -27,4 +27,18 @@ img.wallace {
   min-width: 50%;
   width: 75%;
   align-items: center;
+}
+
+/* Mobile text nonsense */
+@media (max-width: 900px) {
+  .center__text {
+    font-size: 70px;
+  }
+}
+
+/* Mobile text nonsense */
+@media (max-width: 400px) {
+  .center__text {
+    font-size: 55px;
+  }
 }
