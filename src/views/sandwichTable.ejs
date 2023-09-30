@@ -1,0 +1,48 @@
+<%- include('_header'); %>
+  <body>
+    <%- include('_nav'); %>
+        <div class="container home-content">
+          <h1 class="mt-3">Sandwiches</h1>
+          <p>
+          This is going to be the page for the table of sanwich entries
+          </p>
+          <table
+            data-toggle="table"
+            data-filter-control="false"
+            data-filter-clear-show="true"
+            data-show-search-clear-button="true"
+            data-pagination="true"
+            data-pagination-h-align="left"
+            data-pagination-detail-h-align="right"
+            data-url="/data.json"
+            >
+            <thead>
+              <tr>
+                <th data-field="id">ID</th>
+                <th data-field="name" data-sortable="true">Name</th>
+                <th data-field="restaurant" data-sortable="true" data-filter-control="select">Restaurant</th>
+                <th data-field="blurb"data-sortable="true" >Blurb</th>
+                <th data-field="recommended">Recommended</th>
+              </tr>
+            </thead>
+          </table>
+
+    
+    <script>
+      function imageExpander(index, row) {
+        // TODO: pull src from DB
+        // var html = []
+        // $.each(row, function (key, value) {
+        //   html.push('<p><b>' + key + ':</b> ' + value + '</p>')
+        // })
+        let img_src = '';
+        return `<img class="sandwich" src="${img_src}" alt="">`
+      }
+    </script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap-table.min.js"></script>
+    <script src="/js/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+  </body>
+  <%- include('_footer'); %>
+</html>

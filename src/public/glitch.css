@@ -1,0 +1,30 @@
+.center__text {
+  margin: auto;
+  font-size: 110px;
+  color: black;
+  text-transform: uppercase;
+}
+
+/* Chromatic Effect */
+.center__text {
+  color: black;
+  text-shadow:
+            -.027em -.027em blue,
+            -.027em 0px darkmagenta,
+            -.027em .027em fuchsia,
+            0px .027em crimson,
+            .027em .027em red,
+            .027em 0px orange,
+            .027em -.027em yellow,
+            0px -.027em aqua;
+}
+
+.nav-link:hover, a.active {
+  text-decoration: underline;
+}
+
+img.wallace {
+  min-width: 50%;
+  width: 75%;
+  align-items: center;
+}
